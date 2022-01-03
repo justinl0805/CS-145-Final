@@ -1,0 +1,383 @@
+body {
+    color: black;
+    max-width: 50em;
+    line-height: 1.3em;
+    padding: 1%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "nav" "header" "main" "footer";
+}
+
+html {
+    background-color: rgb(214, 246, 247);
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    position: relative;
+    grid-area: main;
+}
+
+footer {
+    margin-top: 40px;
+    grid-area: footer;
+}
+
+footer p {
+    left: 50%;
+}
+
+#commentHeader {
+    margin-left: 45px;
+}
+
+.rating_text {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.rateButton {
+    margin-right: 5px;
+}
+
+.mistake {
+    font-size: 20px;
+    color: red;
+}
+
+#jsDisabled {
+    grid-area: nav;
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+    height: 100px;
+    font-size: 30px;
+    margin-top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    z-index: 1;
+    color: red;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(238, 232, 170, 0.5);
+}
+
+/************************  FORM  ************************/
+#registerForm {
+    max-width: 350px;
+    border: medium solid black;
+    background-color: rgb(166, 225, 233);
+    padding: 1%;
+    margin: auto;
+}
+
+#login {
+    max-width: 300px;
+    border: medium solid black;
+    background-color: rgb(166, 225, 233);
+    padding: 1%;
+    margin: auto; 
+}
+
+.sort {
+    max-width: 700px;
+    border: thin solid black;
+    padding: 1%;
+    margin: auto;
+}
+
+#sortSubmit {
+    display: inline;
+}
+
+.register {
+    border: none;
+    margin-bottom: 8px;
+}
+
+fieldset {
+    border: none;
+}
+
+#createComment {
+    margin: auto;
+    margin-top: 20px;
+    padding: 1%;
+    width: 700px;
+    border: thin solid black;
+}
+
+#createComment_button {
+    width: 80px;
+    height: 35px;
+    font-size: 16px;
+    border: thin solid rgb(1, 25, 29);
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(14, 85, 85);
+    float:right;
+}
+
+#createComment_button:hover {
+    background-color: white;
+    color: black;
+}
+
+.deleteComment_button, .modifyCommentButton {
+    width: 80px;
+    height: 35px;
+    font-size: 16px;
+    border: thin solid rgb(1, 25, 29);
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(14, 85, 85);
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.deleteComment_button:hover, .modifyCommentButton:hover {
+    background-color: white;
+    color: black;
+}
+
+textarea {
+    width: 100%;
+    height: 10em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.modify {
+    display: block;
+}
+
+textarea {
+    white-space: pre-wrap;
+}
+
+p {
+    white-space: pre-wrap;  
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+/************************ POSTS ************************/
+
+.postLink {
+    text-decoration: none;
+    color: black;
+}
+
+.postLink:visited {
+    color: black;
+}
+
+.postBox {
+    position: relative;
+    padding: 10px;
+    border: thin solid black;
+    border-radius: 15px;
+}
+
+.postBox:hover {
+    background-color: rgb(128, 224, 236);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.postBox_pinned {
+    position: relative;
+    padding: 10px;
+    border: thin solid black;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(216, 216, 8)
+}
+
+.postBox_pinned:hover {
+    background-color: yellow
+}
+
+#createPost {
+    width: 140px;
+    height: 55px;
+    font-size: 16px;
+    border: thin solid rgb(1, 25, 29);
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(14, 85, 85);
+    cursor:pointer;
+    outline: none;
+}
+
+#createPost:hover {
+    background-color: white;
+    color: black;
+}
+
+#createPostBox {
+    position: relative;
+    padding: 10px;
+    left: 33%;
+    display: inline-block;
+    /*transform: translate(-50%, -50%);*/
+}
+
+.commentDisplay {
+    display: block;
+    position: relative;
+    padding: 10px;
+    border: thin solid black;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.editCommentForm, .editPostForm, .deletePostForm, .deleteCommentForm {
+    display: none;
+}
+
+.hideDelete {
+    display: none;
+}
+
+.showDelete {
+    display: block;
+}
+
+/************************ NAV ************************/
+nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+}
+
+#nav {
+    text-align: justify;
+}
+
+#nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+.navbar a, #userProfileButton, #profileButton {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: thin solid rgb(1, 25, 29);
+    border-radius: 30px;
+    background-color: rgb(14, 85, 85);
+    margin-right: 25px;
+    width: 70px;
+}
+
+a.activePage {
+    background-color: seagreen;
+}
+
+.navbar {
+    margin-left: -7px;
+    /*overflow: hidden;*/
+    z-index: 1;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+}
+
+#logout {
+    background-color: rgb(3, 55, 104);
+}
+
+#logout:hover {
+    background-color: white;
+}
+
+#profile {
+    float: right;
+}
+
+#profile li {
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    min-height: 320px;
+    overflow: auto;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    margin-top: 10px;
+}
+
+#userProfileButton, #profileButton {
+    width: 100px;
+}
+
+#userProfileButton:hover, #profileButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/************************ ADMIN ************************/
+#update {
+    margin-top: 20px;
+    border: thin solid black;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(166, 225, 233);
+}
+
+.adminReport {
+    font-size: 20px;
+}
+
+.adminReport li {
+    padding-bottom: 15px;
+}
+
+.adminReport li:nth-child(even) {
+    background-color: rgb(166, 225, 233);
+}

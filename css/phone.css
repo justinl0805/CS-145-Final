@@ -1,0 +1,29 @@
+nav a {
+    display: block;
+    padding: .5%;
+}
+
+nav {
+    text-align: left;
+}
+
+#register form {
+    max-width: 300px;
+}
+
+.navbar a {
+    width: 50px;
+    font-size: 14px;
+}
+
+#createComment {
+    margin: auto;
+    margin-top: 20px;
+    padding: 1%;
+    width: 500px;
+    border: thin solid black;
+}
+
+#createPost {
+    margin-left: -20px;
+}
